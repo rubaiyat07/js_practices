@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calaulate Factorial</title>
+	<style type="text/css">
+		body
+		{
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin: 50px;
+		}
+
+		input, button
+		{
+			padding: 10px;
+			margin: 10px;
+			font-size: 16px;
+		}
+
+		#output
+		{
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 20px;
+			color: darkblue;
+		}
+	</style>
+</head>
+<body>
+	<h2>Enter Number</h2>
+	<input type="text" name="numberInput" id="numberInput" placeholder="e.g: 12">
+	<button onclick="factorial()">Submit</button>
+
+	<div id="output"></div>
+
+
+	<script type="text/javascript">
+		function factorial()
+		{const number = parseFloat(document.getElementById('numberInput').value);
+
+			if(number < 0)
+			{
+				document.getElementById('output').innerHTML ="Error! factorial for negetive number does not exists";
+			}
+
+			else if(number == 0)
+			{
+				document.getElementById('output').innerHTML =`The factorial of ${number} is 1`;
+			}
+
+			else
+			{
+				let fact = 1;
+				for(i = 1; i <= number; i++)
+				{
+					fact*= i;	
+				}
+
+				document.getElementById('output').innerHTML = `The factorial of ${number} is ${fact}`;
+			}
+		}
+	</script>
+
+</body>
+</html>

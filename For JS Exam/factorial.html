@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial value of 5</title>
+</head>
+<body>
+    <h1>Factorial value of 5</h1>
+    <p>
+        <p id="factorial"></p>
+    </p>
+    
+    <script>
+        
+        var factorial = 1;
+        for (var i = 1; i <= 5; i++) 
+        
+        {
+            factorial *= i;
+        }
+
+        document.getElementById("factorial").innerHTML = factorial;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+</head>
+
+<body>
+    
+    <h1>Student Grade Calculator</h1>
+    
+    <form id="gradeForm">
+        <label for="percentage">Enter Number:</label>
+        <input type="number" id="percentage" name="percentage" required>
+        <button type="submit">Calculate Grade</button>
+    </form>
+
+    <p id="gradeResult"></p>
+
+    <script>
+        document.getElementById('gradeForm').addEventListener('submit', function(event) 
+        {
+            event.preventDefault();
+            const percentage = parseFloat(document.getElementById('percentage').value);
+            let grade;
+
+            if (percentage >= 80) 
+            {
+                grade = 'A+';
+            } 
+            
+            else if (percentage >= 70) 
+            {
+                grade = 'A';
+            } 
+            
+            else if (percentage >= 60) 
+            {
+                grade = 'B';
+            } 
+            
+            else 
+            {
+                grade = 'F';
+            }
+
+            document.getElementById('gradeResult').textContent = `Grade: ${grade}`;
+        });
+
+    </script>
+
+</body>
+
+</html>

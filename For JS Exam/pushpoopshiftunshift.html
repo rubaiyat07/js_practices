@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Push and Pop function</title>
+</head>
+<body>
+
+	<script>
+		var myarr = ['Kamal','Jamal','Zahid'];
+
+		//alert(myarr);
+		myarr.push('Sagor');
+		alert(myarr);
+		myarr.pop();
+		alert(myarr);
+	</script>
+
+	<script type="text/javascript">
+		var myarr = ['Kamal','Jamal','Zahid'];
+
+		myarr.shift();
+		alert(myarr);
+		myarr.unshift('Sagor');
+		alert(myarr);
+
+		delete myarr[1];
+		alert(myarr);
+	</script>
+
+<script>
+		var arr = ["Kamal","Jamal","Zahid","Rebeca","Sagor","Sharif"];
+
+		alert(arr);
+		/*arr.splice(2,0,"Limon");
+		document.write(arr+"<br>");
+		arr.splice(2,2);
+		document.write(arr);*/
+
+		var x = arr.slice(0,3);
+		document.write(x+"<br>");
+
+		x = arr.slice(-2);
+		document.write(x);
+
+		/*for (var i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+		}*/
+	</script>
+
+</body>
+</html>
