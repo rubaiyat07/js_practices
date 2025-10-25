@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Functions</title>
+</head>
+
+<body>
+	<!-- <script type="text/javascript">
+		function myname()
+		{
+			var a = 12;
+			var b = 34;
+			var c = a + b;
+			alert(c);
+		}
+	</script> -->
+
+
+	<!-- <script type="text/javascript">
+		function sum(a, b)
+		{
+			var a = parseFloat(prompt("Enter first number"));
+			var b = parseFloat(prompt("Enter secod number"));
+
+			var c = a + b;
+			document.getElementById("mytotal").innerHTML = c;
+		}
+	</script> -->
+
+
+	<!-- <script type="text/javascript">
+		var xyz = 1000;
+		function mno()
+		{
+			var xyz = 350;
+
+		}
+	</script> -->
+
+
+<!-- Variable Script -->
+	<!-- <script type="text/javascript">
+		function xyz()
+		{
+			var a = 15;
+			var b = 5;
+			// var a = 5;
+			var c = a + b;
+
+			return c;
+		}
+
+		alert(xyz());
+	</script> -->
+
+
+	<!-- <script type="text/javascript">
+//ternary operator
+
+		// var num = 12;
+		// (num >= 5) ? alert("Num is big!") : alert("Num is small!");
+
+		//multiple condition
+		var marks = 50;
+		var res = (marks < 40) ? "Unsatisfactory" : 
+				  (marks < 60) ? "Average" :
+				  (marks < 80) ? "Good" : "Excellent!";
+
+		document.write(res);
+	</script> -->
+
+
+<!-- Arrow Function ES6 Edition -->
+	<!-- <script type="text/javascript">
+
+	// 		var x = (x,y)=> x * y;
+
+	// 		alert(x(10,3));
+
+
+	// 	var num = 0;
+	// 	var check = (num >= 10) ? ()=>alert("The number is big!") : ()=>alert("The number is small!"); check();
+	// 
+
+			let sum = (a,b)=>
+			{
+				let result = a + b;
+				return result;
+			}
+			// let res = sum(5,7);
+			let res = sum(parseInt(prompt("Enter Number")),parseInt(prompt("Enter Number")));
+			alert(res);
+	</script> -->
+
+
+
+<!-- Function as Expession: -->
+	<!-- <script type="text/javascript">
+		var abc = function(square, xyz)
+		{
+			return square * xyz;
+		}
+
+		document.write(abc(5,8));
+
+		var x = abc(12,5);
+		alert(x);
+
+	</script> -->
+
+	<script type="text/javascript">
+		var r = function(a,b,c,d,e)
+		{
+			return a/c+b-d*e;
+		}
+		// document.write(r(40,7,5,2,2));
+		alert(r(parseInt(prompt("Enter the Number")),parseInt(prompt("Enter the Number")),parseInt(prompt("Enter the Number")),parseInt(prompt("Enter the Number")),parseInt(prompt("Enter the Number"))));
+
+	</script>
+
+
+	<br><br><br> 
+	<!-- <button type="button" onclick="myname()">Sum</button>
+	<button type="button" onclick="sum()">Sum 1</button>
+	<p id="mytotal" style="background-color: gray; color: ghostwhite;"></p> -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Slice & Splice</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//Slice & Splice Function:
+
+		var arr = ["Kamal","Jamal","Zahid","Rebeca","Sagor","Sharif"];
+		alert(arr);
+		arr.splice(3, 2, "Dinar", "Fardin");
+		document.write(arr+"<br>");
+		arr.splice(3,2);
+		document.write(arr+"<br>");
+
+		var x = arr.slice(0,3); //shows the 1st 3 names
+		document.write(x+"<br>");
+
+		x = arr.slice(-4); //shows the last 4 names
+		document.write(x);
+		
+	</script>
+
+</body>
+</html>
