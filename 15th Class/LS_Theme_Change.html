@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Theme Changer</title>
+
+	<style type="text/css">
+		body.dark { background-color:black; color: white; }
+		.dark button { background-color:white; color:black;}
+		body.light { background-color:white; color:black; }
+		.light button { background-color:black; color:white; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); }
+
+	</style>
+</head>
+
+<body>
+	<button onclick="setTheme('dark')">Dark Mode</button>
+	<button onclick="setTheme('light')">Light Mode</button>
+
+	<h2>This website has two themes.</h2>
+
+	<script type="text/javascript">
+		function setTheme(mode)
+		{
+			document.body.className = mode;
+			localStorage.setItem("theme",mode);
+		} 
+
+		window.onload = function()
+		{
+			let saveTheme = localStorage.getItem("theme");
+			if(saveTheme)
+			{
+				document.body.className = saveTheme;
+			}
+		}
+	</script>
+</body>
+</html>
