@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prime Number</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function primeNumber()
+		{
+			var number = document.getElementById("prime").value;
+			var checkPrime = true;
+
+			if(number == 1)
+			{
+				document.write("1 is not a prime or non-prime number");
+			}
+
+			else if(number >1)
+			{
+				for(i = 2; i < number; i++)
+				{
+					if(number % i == 0)
+					{
+						checkPrime = false;
+						break;
+					}
+				}
+				if(checkPrime)
+				{
+					document.write(`${number} is a prime number`);
+				}
+				else
+				{
+					document.write(`${number} is not a prime number`);
+				}
+			}
+			else
+			{
+				document.write("Zero or negative number cannot be a prime number");
+			}
+		}
+
+		let a = 4;
+		let b = ++a;
+
+
+		document.write(a+"<br>");
+		document.write(b+"<br>");
+	</script>
+
+	<form id="form1">
+		<input type="text" name="prime" id="prime">
+		<button type="button" onclick="primeNumber()">Check</button>
+	</form>
+</body>
+</html>

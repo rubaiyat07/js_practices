@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Live Search</title>
+	<style type="text/css">
+		body
+		{
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin: 50px;
+		}
+
+		input, button
+		{
+			padding: 10px;
+			margin: 10px;
+			font-size: 16px;
+		}
+		
+		ul li
+		{
+			font-family: Arial, sans-serif;
+			list-style-type: none;
+			border-bottom: solid #333 1px;
+			background-color: #d3e5f4;
+			padding: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>Live Search</h2>
+	<input type="text" name="searchBox" id="searchBox" placeholder="search...">
+	<ul id="itemList">
+		<li>Apple</li>
+		<li>Mango</li>
+		<li>Banana</li>
+		<li>Guava</li>
+		<li>Jackfruit</li>
+		<li>Kiwi</li>
+		<li>Peach</li>
+		<li>Grapes</li>
+		<li>Pomegranate</li>
+		<li>Watermelon</li>
+		<li>Orange</li>
+		<li>Lemon</li>
+		<li>Melon</li>
+		<li>Tangarine</li>
+		<li>Pineapple</li>
+		<li>Cherry</li>
+		<li>Date</li>
+		<li>Strawberry</li>
+		<li>Blueberry</li>
+	</ul>
+
+	<script type="text/javascript">
+		document.getElementById("searchBox").addEventListener("keyup", function()
+		{
+			let filter = this.value.toLowerCase(); //this. is taking the value from the searchBox
+			let items = document.querySelectorAll("#itemList li");
+
+			items.forEach(function(item)
+			{
+				if(item.innerText.toLowerCase().includes(filter))
+				{
+					item.style.display = '';
+				}
+				else
+				{
+					item.style.display = "none";
+				}
+			});
+		});
+	</script>
+</body>
+</html>

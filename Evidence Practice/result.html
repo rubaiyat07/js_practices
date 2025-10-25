@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Result</title>
+</head>
+<body>
+	<h3>Enter your marks</h3>
+	<input type="text" name="marks" id="marks" placeholder="e.g: 55">
+	<button onclick="result()">Submit</button>
+	<div id="output"></div>
+
+	<script type="text/javascript">
+		function result() {
+			// Get the value of the input field and convert it to a number
+			let input = parseInt(document.getElementById("marks").value);
+
+			// Check if the input is a valid number
+			if (isNaN(input)) {
+				document.getElementById("output").innerHTML = "Please enter a valid number!";
+				return; // Exit the function if input is invalid
+			}
+
+			// Check the grade based on the input
+			if (input >= 80) {
+				document.getElementById("output").innerHTML = "Your grade is A+!";
+			}
+			else if (input >= 70) {
+				document.getElementById("output").innerHTML = "Your grade is A!";
+			}
+			else if (input >= 60) {
+				document.getElementById("output").innerHTML = "Your grade is B!";
+			}
+			else {
+				document.getElementById("output").innerHTML = "You have failed!";
+			}
+		}	
+	</script>
+
+</body>
+</html>

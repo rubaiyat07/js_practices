@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trainee Data Form</title>
+</head>
+<body>
+	<form id="trainerform">
+		<label>Name:</label><br>
+		<input type="text" name="name" id="name"><br>
+		<label>Contact:</label><br>
+		<input type="text" name="contact" id="contact"><br>
+		<label>Address:</label><br>
+		<textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+		<label>Sex:</label><br>
+		<input type="radio" name="sex" id="male" value="Male">
+		<label>Male</label><br>
+		<input type="radio" name="sex" id="female" value="Female">
+		<label>Female</label><br>
+
+		<label>Select Courses:</label><br>
+		<input type="checkbox" name="course" id="nt" value="NT">
+		<label>NT</label><br>
+		<input type="checkbox" name="course" id="wdpf" value="WDPF">
+		<label>WDPF</label><br>
+		<input type="checkbox" name="course" id="ddd" value="DDD">
+		<label>DDD</label><br>
+		<input type="checkbox" name="course" id="esad" value="ESAD">
+		<label>ESAD</label><br>
+
+		<label>Select Location:</label><br>
+		<select id="location" name="location">
+			<option value="Banani">Banani</option>
+			<option value="Dhanmondi">Dhanmondi</option>
+			<option value="Mirpur">Mirpur</option>
+			<option value="Paltan">Paltan</option>
+			<option value="Kazipara">Kazipara</option>		
+		</select><br><br>
+
+		<button type="button" onclick="submitForm()">Submit</button>
+	</form>
+
+
+	<script type="text/javascript">
+		class Trainer
+		{
+			constructor(name, contact, address, sex, courses, location)
+			{
+				this.name = name;
+				this.contact = contact;
+				this.address = address;
+				this.sex = sex;
+				this.courses = courses;
+				this.location =location;
+			}
+
+			getFormData()
+			{
+				return `Name:${this.name }\nContact:${this.contact }\nAddress:${this.address }\nSex:${this.sex }\nCourses:${this.courses.join(",")}\nLocation:${this.location}`;
+			}
+		}
+
+		function submitForm()
+		{
+			const name = document.getElementById("name").value;
+			const contact = document.getElementById("contact").value;
+			const address = document.getElementById("address").value;
+			const sex = document.querySelector('input[name="sex"]:checked').value;
+
+			const courses = Array.from(document.querySelectorAll('input[name="course"]:checked')).map(course=>course.value);
+			const location = document.getElementById("location").value;
+			const trainer = new Trainer(name, contact, address, sex, courses, location);
+			const formattedData = trainer.getFormData();
+			const newWindow = window.open("","_blank");
+			newWindow.document.write("<pre>"+formattedData+"</pre>");
+		}
+
+	</script>
+
+</body>
+</html>
