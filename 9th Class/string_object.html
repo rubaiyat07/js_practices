@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var mytext = prompt("Enter you text");
+		document.write("<b>The original text is:</b>"+mytext+"<br>");
+		document.write("Replaced text is: "+mytext.replace("I'm a novice","I'm an ameteur")+"<br>");
+
+		var position = mytext.search("novice");
+		document.write("The searched string position is: "+position+"<br>");
+
+		var txtunit = mytext.substr(6, 13);
+		document.write("The substring text is: "+txtunit+"<br>");
+
+		document.write("Fontcolor of the original text is: "+mytext.fontcolor("orange")+"<br>");
+		document.write("Font style of the original text is: "+mytext.italics()+"<br>");
+		document.write("Font style of the original text is: "+mytext.bold()+"<br>");
+	</script>
+
+</body>
+</html>

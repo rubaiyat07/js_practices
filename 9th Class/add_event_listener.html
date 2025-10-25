@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adding Event Listener, Image Object</title>
+</head>
+<body>
+
+	<h1>Loading image...</h1>
+	<div class="result">
+		
+
+	</div>
+	<button class="btn">Click here</button>
+	<h4>Click the button to load the image...</h4>
+
+
+<script type="text/javascript">
+	var resEle = document.querySelector(".result");
+	var btnEle = document.querySelector(".btn");
+
+	var newImage = new Image(600,500);
+	newImage.src = "images/3.jpg";
+	btnEle.addEventListener('click',()=>{
+		resEle.appendChild(newImage);
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object by Reference</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Student(id, name, sub, marks)
+		{
+			this.id = id;
+			this.name = name;
+			this.sub = sub;
+			this.marks = marks;
+		}
+		var st1 = new Student(123,"Jahid Hasan","Math",67);
+		var st2 = new Student(124,"Rihan Sheikh","English",75);
+
+		document.write(st1.id+" "+st1.name+"<br>");
+		document.write(st2.id+" "+st2.name+"<br>");
+
+	</script>
+
+</body>
+</html>
